@@ -2,11 +2,12 @@ from concurrent.futures import ProcessPoolExecutor
 from functools import partial
 from utils import audio
 import os
-import numpy as np 
+import numpy as np
 from chinese2pinyin import ch2p, num2han
 
+
 def build_from_path(input_dir, out_dir, n_jobs=4, tqdm=lambda x: x):
-	"""
+    """
 	Preprocesses the Lj speech dataset from a gven input path to a given output directory
 
 	Args:
@@ -19,25 +20,25 @@ def build_from_path(input_dir, out_dir, n_jobs=4, tqdm=lambda x: x):
 		- A list of tuple describing the train examples. this should be written to train.txt
 	"""
 
-	# We use ProcessPoolExecutor to parallelize across processes, this is just for 
-	# optimization purposes and it can be omited
-	executor = ProcessPoolExecutor(max_workers=n_jobs)
-	futures = []
-	index = 1
-	with open(os.path.join(input_dir, 'wavs.txt'), encoding='utf-8') as f:
-		for line in f:
-			parts = line.strip().split('<------>')
-			wav_path = os.path.join(input_dir, 'wavs', '{}.wav'.format(parts[0]))
-			text1 = parts[1]
-			text = ch2p(text1)
-			print("%s.wav: %s, ===>%s" % (parts[0], text1, text))
-			futures.append(executor.submit(partial(_process_utterance, out_dir, index, wav_path, text)))
-			index += 1
-	return [future.result() for future in tqdm(futures)]
+    # We use ProcessPoolExecutor to parallelize across processes, this is just for
+    # optimization purposes and it can be omited
+    executor = ProcessPoolExecutor(max_workers=n_jobs)
+    futures = []
+    index = 1
+    with open(os.path.join(input_dir, 'wavs.txt'), encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('<------>')
+            wav_path = os.path.join(input_dir, 'wavs', '{}.wav'.format(parts[0]))
+            text1 = parts[1]
+            text = ch2p(text1)
+            print("%s.wav: %s, ===>%s" % (parts[0], text1, text))
+            futures.append(executor.submit(partial(_process_utterance, out_dir, index, wav_path, text)))
+            index += 1
+    return [future.result() for future in tqdm(futures)]
 
 
 def _process_utterance(out_dir, index, wav_path, text):
-	"""
+    """
 	Preprocesses a single utterance wav/text pair
 
 	this writes the mel scale spectogram to disk and return a tuple to write
@@ -53,19 +54,19 @@ def _process_utterance(out_dir, index, wav_path, text):
 		- A tuple: (mel_filename, n_frames, text)
 	"""
 
-	# Load the audio as numpy array
-	wav = audio.load_wav(wav_path)
+    # Load the audio as numpy array
+    wav = audio.load_wav(wav_path)
 
-	# Compute the linear-scale spectrogram from the wav to calculate n_frames
-	spectrogram = audio.spectrogram(wav).astype(np.float32)
-	n_frames = spectrogram.shape[1]
+    # Compute the linear-scale spectrogram from the wav to calculate n_frames
+    spectrogram = audio.spectrogram(wav).astype(np.float32)
+    n_frames = spectrogram.shape[1]
 
-	# Compute the mel scale spectrogram from the wav
-	mel_spectrogram = audio.melspectrogram(wav).astype(np.float32)
+    # Compute the mel scale spectrogram from the wav
+    mel_spectrogram = audio.melspectrogram(wav).astype(np.float32)
 
-	# Write the spectrogram to disk
-	mel_filename = 'ljspeech-mel-{:05d}.npy'.format(index)
-	np.save(os.path.join(out_dir, mel_filename), mel_spectrogram.T, allow_pickle=False)
+    # Write the spectrogram to disk
+    mel_filename = 'ljspeech-mel-{:05d}.npy'.format(index)
+    np.save(os.path.join(out_dir, mel_filename), mel_spectrogram.T, allow_pickle=False)
 
-	# Return a tuple describing this training example
-	return (mel_filename, n_frames, text)
+    # Return a tuple describing this training example
+    return (mel_filename, n_frames, text)
