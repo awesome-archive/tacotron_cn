@@ -5,7 +5,7 @@ import tensorflow as tf
 hparams = tf.contrib.training.HParams(
 	# Comma-separated list of cleaners to run on text prior to training and eval. For non-English
 	# text, you may want to use "basic_cleaners" or "transliteration_cleaners" See TRAINING_DATA.md.
-	cleaners='basic_cleaners',
+	cleaners='english_cleaners',
 
 	#Audio
 	num_mels=80,
@@ -20,17 +20,29 @@ hparams = tf.contrib.training.HParams(
 
 	#Model
 	outputs_per_step = 1,
-	attention_dim = 128,
 	parameter_init = 0.5,
 	sharpening_factor = 1.0,
 	max_decode_length = None,
 	num_classes = None,
 	time_major = False,
 	hidden_dim = 128,
-	embedding_dim = 512,
+
+	# Encoder
+	char_embed_size=512,
+	enc_3conv_sizes=[512, 512, 512],
+	enc_rnn_size=512,
+
+	# Attention
+	attention_size=128,
+
+	# Decoder
+	dec_prenet_sizes=[256, 256],
+	dec_rnn_size=1024,
 
 	#Training
-	batch_size = 32,
+	batch_size=64,
+	drop_prob = 0.5,
+	zoneout_prob = 0.1,
 	reg_weight = 10e-6,
 	decay_learning_rate = True,
 	decay_steps = 50000,
@@ -40,7 +52,6 @@ hparams = tf.contrib.training.HParams(
 	adam_beta1 = 0.9,
 	adam_beta2 = 0.999,
 	adam_epsilon = 10e-6,
-
 	)
 
 def hparams_debug_string():

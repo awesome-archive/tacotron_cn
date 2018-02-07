@@ -41,7 +41,7 @@ class TacoTestHelper(Helper):
 			#Predict if the encoder should stop (dynamic end token)
 			concat = tf.concat([LSTM_output, context], axis=-1)
 			scalar = projection(concat, 1, activation=tf.nn.sigmoid, scope='end_token_projection')
-			finished = np.round(f).astype(np.bool)
+			finished = np.round(scalar).astype(np.bool)
 
 			# Feed last output frame as next input. outputs is [N, output_dim * r]
 			next_inputs = cell_outputs

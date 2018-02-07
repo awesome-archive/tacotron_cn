@@ -1,5 +1,7 @@
+# code based : https://github.com/Rayhane-mamah/Tacotron-2/blob/master/tacotron/train.py
+
 import numpy as np
-import pandas as pd
+# import pandas as pd
 from datetime import datetime
 import os
 import subprocess
@@ -86,12 +88,11 @@ def train(log_dir, args):
                 try:
                     checkpoint_state = tf.train.get_checkpoint_state(log_dir)
                 except tf.errors.OutOfRangeError as e:
-                    checkpoint_state = None
                     log('Cannot restore checkpoint: {}'.format(e))
 
-                if (checkpoint_state and checkpoint_state.model_checkpoint_path):
-                    log('Loading checkpoint {}'.format(checkpoint_state.model_checkpoint_path))
-                    saver.restore(sess, checkpoint_state.model_checkpoint_path)
+            if (checkpoint_state and checkpoint_state.model_checkpoint_path):
+                log('Loading checkpoint {}'.format(checkpoint_state.model_checkpoint_path))
+                saver.restore(sess, checkpoint_state.model_checkpoint_path)
 
             else:
                 if not args.restore:
@@ -150,11 +151,11 @@ def train(log_dir, args):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--base_dir', default='/media/btows/SDB/tts_dataset/', )  # default=os.path.dirname(os.path.realpath(__file__)))
-    parser.add_argument('--input', default='pinyin_tacotrain_2/training/train.txt')
-    parser.add_argument('--model', default='Tacotron')
+    parser.add_argument('--base_dir', default=os.path.dirname(os.path.realpath(__file__)))
+    parser.add_argument('--input', default='training/train.txt')
+    parser.add_argument('--model', default='Tacotron2')
     parser.add_argument('--name', help='Name of the run, Used for logging, Defaults to model name')
-    parser.add_argument('--restore', type=bool, default=False, help='Set this to False to do a fresh training')
+    parser.add_argument('--restore', type=bool, default=True, help='Set this to False to do a fresh training')
     parser.add_argument('--summary_interval', type=int, default=100,
                         help='Steps between running summary ops')
     parser.add_argument('--checkpoint_interval', type=int, default=100,
