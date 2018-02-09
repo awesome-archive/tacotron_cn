@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ec5ea3d-9950-4ad4-b852-17b364d63353" name="默认" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hparams.py" afterPath="$PROJECT_DIR$/hparams.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/__init__.py" afterPath="$PROJECT_DIR$/models/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/attention_wrapper.py" afterPath="$PROJECT_DIR$/models/attention_wrapper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/helpers.py" afterPath="$PROJECT_DIR$/models/helpers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/modules.py" afterPath="$PROJECT_DIR$/models/modules.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train.py" afterPath="$PROJECT_DIR$/train.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/text.py" afterPath="$PROJECT_DIR$/utils/text.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/baseline/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/baseline/models/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/baseline/models/ae_configs/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/wavenet/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,44 +26,28 @@
             <state relative-caret-position="378">
               <caret line="105" column="27" lean-forward="false" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
               <folding>
-                <marker date="1517965454535" expanded="true" signature="6759:7583" ph="..." />
+                <element signature="e#90#108#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tacotron.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/tacotron.py">
+      <file leaf-file-name="tacotron2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/tacotron2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="91" column="48" lean-forward="false" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-692">
+              <caret line="99" column="42" lean-forward="false" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/text.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cleaners.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/cleaners.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-              <folding>
-                <marker date="1517965454535" expanded="true" signature="2374:2387" ph="..." />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,6 +71,18 @@
               <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parallel_wavnet.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#76#114#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,6 +136,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>decay_steps</find>
@@ -163,14 +167,15 @@
         <option value="$PROJECT_DIR$/utils/text.py" />
         <option value="$PROJECT_DIR$/hparams.py" />
         <option value="$PROJECT_DIR$/utils/cleaners.py" />
+        <option value="$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="y" value="25" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -218,17 +223,20 @@
             <path>
               <item name="tacotron_cn" type="b2602c69:ProjectViewProjectNode" />
               <item name="tacotron_cn" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="wavnet_vocode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tacotron_cn" type="b2602c69:ProjectViewProjectNode" />
               <item name="tacotron_cn" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="wavnet_vocode" type="462c0819:PsiDirectoryNode" />
+              <item name="nsynth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tacotron_cn" type="b2602c69:ProjectViewProjectNode" />
               <item name="tacotron_cn" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="wavnet_vocode" type="462c0819:PsiDirectoryNode" />
+              <item name="nsynth" type="462c0819:PsiDirectoryNode" />
+              <item name="wavenet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -242,6 +250,9 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wavnet_vocode" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/utils" />
@@ -352,7 +363,7 @@
         <state relative-caret-position="738">
           <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -370,7 +381,7 @@
         <state relative-caret-position="-162">
           <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -381,26 +392,6 @@
           <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
           <folding>
             <marker date="1517965454535" expanded="true" signature="2374:2387" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/feeder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="119" column="31" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -443,22 +434,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/tacotron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="76" column="30" lean-forward="false" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="105" column="27" lean-forward="false" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
           <folding>
-            <marker date="1517965454535" expanded="true" signature="6759:7583" ph="..." />
+            <element signature="e#90#108#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/tacotron.py">
+    <entry file="file://$PROJECT_DIR$/models/tacotron2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="91" column="48" lean-forward="false" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="48" />
+        <state relative-caret-position="-692">
+          <caret line="99" column="42" lean-forward="false" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/feeder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="119" column="31" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="31" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#76#114#0" expanded="true" />
           </folding>
         </state>
       </provider>
