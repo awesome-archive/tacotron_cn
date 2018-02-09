@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ec5ea3d-9950-4ad4-b852-17b364d63353" name="默认" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/baseline/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/baseline/models/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/baseline/models/ae_configs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/nsynth/wavenet/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py" afterPath="$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,10 +72,10 @@
       <file leaf-file-name="parallel_wavnet.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="496">
+              <caret line="590" column="9" lean-forward="true" selection-start-line="590" selection-start-column="9" selection-end-line="590" selection-end-column="9" />
               <folding>
-                <element signature="e#76#114#0" expanded="true" />
+                <element signature="e#0#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -224,19 +217,6 @@
               <item name="tacotron_cn" type="b2602c69:ProjectViewProjectNode" />
               <item name="tacotron_cn" type="462c0819:PsiDirectoryNode" />
               <item name="wavnet_vocode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tacotron_cn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tacotron_cn" type="462c0819:PsiDirectoryNode" />
-              <item name="wavnet_vocode" type="462c0819:PsiDirectoryNode" />
-              <item name="nsynth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tacotron_cn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tacotron_cn" type="462c0819:PsiDirectoryNode" />
-              <item name="wavnet_vocode" type="462c0819:PsiDirectoryNode" />
-              <item name="nsynth" type="462c0819:PsiDirectoryNode" />
-              <item name="wavenet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -492,10 +472,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wavnet_vocode/parallel_wavnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="496">
+          <caret line="590" column="9" lean-forward="true" selection-start-line="590" selection-start-column="9" selection-end-line="590" selection-end-column="9" />
           <folding>
-            <element signature="e#76#114#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
