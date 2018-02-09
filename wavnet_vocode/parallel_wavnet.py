@@ -296,7 +296,6 @@ class Config(object):
     ae_num_layers = 30
     ae_filter_length = 3
     ae_width = 128
-    """
     # Encode the source with 8-bit Mu-Law.
     x = inputs['wav']
     x_quantized = utils.mu_law(x)
@@ -337,7 +336,6 @@ class Config(object):
         name='ae_bottleneck')
     en = masked.pool1d(en, self.ae_hop_length, name='ae_pool', mode='avg')
     encoding = en
-    """
     ###
     # The WaveNet Decoder.
     ###
