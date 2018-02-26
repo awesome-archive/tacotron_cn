@@ -3,7 +3,7 @@ from functools import partial
 from utils import audio
 import os
 import numpy as np 
-from chinese2pinyin import ch2p, num2han
+
 
 def build_from_path(input_dir, out_dir, n_jobs=4, tqdm=lambda x: x):
 	"""
@@ -24,13 +24,11 @@ def build_from_path(input_dir, out_dir, n_jobs=4, tqdm=lambda x: x):
 	executor = ProcessPoolExecutor(max_workers=n_jobs)
 	futures = []
 	index = 1
-	with open(os.path.join(input_dir, 'wavs.txt'), encoding='utf-8') as f:
+	with open(os.path.join(input_dir, 'metadata.csv'), encoding='utf-8') as f:
 		for line in f:
-			parts = line.strip().split('<------>')
+			parts = line.strip().split('|')
 			wav_path = os.path.join(input_dir, 'wavs', '{}.wav'.format(parts[0]))
-			text1 = parts[1]
-			text = ch2p(text1)
-			print("%s.wav: %s, ===>%s" % (parts[0], text1, text))
+			text = parts[2]
 			futures.append(executor.submit(partial(_process_utterance, out_dir, index, wav_path, text)))
 			index += 1
 	return [future.result() for future in tqdm(futures)]
