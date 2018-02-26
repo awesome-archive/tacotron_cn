@@ -4,7 +4,7 @@ from pypinyin import lazy_pinyin, load_phrases_dict
 import pypinyin
 # origin
 # "."
-PUNCTUATION = ['，', '、', '。','？','！','“','”','；','：','（',"）",":",";",",","?","!","\"","\'","(",")"]
+PUNCTUATION = [ '、','“','”','；','：','（',"）",":",";",",","?","!","\"","\'","(",")"]
 PUNCTUATION1 = r'，、。？！;,?!'  # 断句分隔符
 PUNCTUATION2 = r'“”；：（）×"\':()*#'  # 其它符号
 
